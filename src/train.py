@@ -1,7 +1,7 @@
 import torch.optim as optim
 import torch.nn as nn
-from preprocess import load_and_preprocess_data, create_dataloaders
-from utils import RegressionModel, save_model
+from src.preprocess import load_and_preprocess_data, create_dataloaders
+from src.utils import RegressionModel, save_model
 
 
 def train(train_path, model_path, scaler_path, num_epochs=600):
