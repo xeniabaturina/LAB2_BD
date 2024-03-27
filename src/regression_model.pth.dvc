@@ -1,0 +1,6 @@
+outs:
+- md5: f01b3757a18e5f2e077611dad8f74c01
+  size: 9762
+  isexec: true
+  hash: md5
+  path: regression_model.pth
