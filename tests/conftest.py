@@ -2,6 +2,10 @@ import pytest
 import pandas as pd
 import numpy as np
 
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parents[1]))
+
 
 @pytest.fixture(scope="module")
 def generated_fixture_data(tmp_path_factory):

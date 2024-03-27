@@ -1,5 +1,5 @@
 import numpy as np
-from src import load_and_preprocess_data
+from src.preprocess import load_and_preprocess_data
 
 
 def test_data_normalization(generated_fixture_data):
