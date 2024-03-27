@@ -1,4 +1,4 @@
-from src import train
+from src.train import train
 from src.predict import predict
 import pandas as pd
 

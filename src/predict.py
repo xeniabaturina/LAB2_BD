@@ -2,6 +2,7 @@ import torch
 import pandas as pd
 from src.preprocess import load_and_preprocess_data
 from src.utils import load_model
+import configparser
 
 
 def predict(test_path, model_path, scaler_path, predictions_path):
@@ -22,8 +23,11 @@ def predict(test_path, model_path, scaler_path, predictions_path):
 
 
 if __name__ == "__main__":
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+
     path_to_test = '../data/test.csv'
-    path_to_model = 'regression_model.pth'
-    path_to_scaler = 'scaler.pkl'
+    path_to_model = config['model']['model_path']
+    path_to_scaler = config['preprocessing']['scaler_path']
     path_to_predictions = 'submission_my_model.csv'
     predict(path_to_test, path_to_model, path_to_scaler, path_to_predictions)
