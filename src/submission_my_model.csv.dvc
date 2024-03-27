@@ -1,0 +1,6 @@
+outs:
+- md5: 3e99b98d6debd4c9774aa63029467cd6
+  size: 2355
+  isexec: true
+  hash: md5
+  path: submission_my_model.csv

@@ -1,0 +1,6 @@
+outs:
+- md5: 8e0e0117cb16fc0c9503823f55f70cc0
+  size: 785
+  isexec: true
+  hash: md5
+  path: scaler.pkl
