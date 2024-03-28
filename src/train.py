@@ -1,7 +1,7 @@
 import torch.optim as optim
 import torch.nn as nn
-from src.preprocess import load_and_preprocess_data, create_dataloaders
-from src.utils import RegressionModel, save_model
+from .preprocess import load_and_preprocess_data, create_dataloaders
+from .utils import RegressionModel, save_model
 import configparser
 
 
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     config = configparser.ConfigParser()
     config.read('config.ini')
 
-    path_to_train = '../data/train.csv'
+    path_to_train = config['data']['train_data_path']
     path_to_model = config['model']['model_path']
     path_to_scaler = config['preprocessing']['scaler_path']
     epochs_number = int(config['hyperparameters']['num_epochs'])
