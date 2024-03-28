@@ -1,7 +1,7 @@
 import torch
 import pandas as pd
-from src.preprocess import load_and_preprocess_data
-from src.utils import load_model
+from .preprocess import load_and_preprocess_data
+from .utils import load_model
 import configparser
 
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     config = configparser.ConfigParser()
     config.read('config.ini')
 
-    path_to_test = '../data/test.csv'
+    path_to_test = config['data']['test_data_path']
     path_to_model = config['model']['model_path']
     path_to_scaler = config['preprocessing']['scaler_path']
     path_to_predictions = 'submission_my_model.csv'
