@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Pull Docker image
-      run: docker pull xeniabaturina/lab1_bd:latest
+      run: docker pull xeniabaturina/lab2_bd:latest
 
     - name: Execute Functional Tests
-      run: docker run --rm xeniabaturina/lab1_bd pytest tests/
+      run: docker run --rm xeniabaturina/lab2_bd pytest tests/
